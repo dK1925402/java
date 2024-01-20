@@ -1,0 +1,84 @@
+// binary search 
+
+import java.util.Scanner;// import this for use the scanner function
+
+class UserInputExample {
+    
+    public static void main(String[] args) {
+
+        // Creating a Scanner object to read input from the user
+        Scanner scanf = new Scanner(System.in);// we rename the scanner fn to scanf fn
+
+
+        int[] a= new int[100]; // create a array and also initialize the value
+        int b = a.length;// create b variable for store the length of array
+
+        // store the data in all the ararys ;
+        for (int i = 0 ; i<b ; i++ ){
+            a[i]= i*5;
+        }
+
+        // this variable declare for do-while loop y - means yes loop continue && n - means no exit in the loop
+        char choose = 'y';
+
+        // declare the variable
+        int low, mid, high;
+        low = 0;
+        high = b;
+        mid = (low + high) / 2;
+
+        // if element is found then success is equall to "1"
+        int success = 0;
+
+        // logic
+       do {
+
+       //take input from the user
+     System.out.print("Search : ");
+    int s = scanf.nextInt();
+
+
+
+
+    while(low<=high) {
+
+        // if element is equally to search then print is element is found successfully
+         if (s == a[mid]) {
+
+             System.out.println("Element is found on a[" + mid + "] is " + s);
+             success = 1;
+             break;
+        }
+
+
+        else {
+
+             // element is greater than the mid array
+            if (s > a[mid]) {
+                low = mid + 1;
+                mid = (low + high) / 2;
+            }
+
+            //element is smaller than the mid arary
+            else if (s < a[mid]) {
+                high = mid - 1;
+                mid = (low + high) / 2;
+            }
+        }
+    }
+
+    // if element is not found
+    if ( success==0){
+        System.out.print("Element not found!\n\n");
+    }
+
+    // if repeat the program then enter y and stop the program enter n.
+    System.out.print("\nrepeat the program (y/n) : ");
+    choose = scanf.next().charAt(0);
+
+}while(  choose != 'n');// conditions of while loop
+
+        // Close the Scanner to avoid resource leaks
+       scanf.close();
+    }
+}
