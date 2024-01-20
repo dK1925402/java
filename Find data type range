@@ -1,0 +1,23 @@
+
+ import java.lang.Math ;
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) {
+        
+        int a ;
+        Scanner scanf = new Scanner(System.in);
+        
+        System.out.print("Enter total no. of byte : ");
+        a = scanf.nextInt();
+        
+        double b = (Math.pow(2,((a*8)-1)));
+
+        //System.out.print("'"+a+"'"+"byte data type range from -"+(Math.pow(2,((a*8)-1)))+" to "+(Math.pow(2,((a*8)-1))-1));
+        
+        System.out.println("              OR                   ");
+        
+         System.out.print("'"+a+"'"+"byte data type range from -"+b+" to "+b-1); 
+    }
+    
+}
