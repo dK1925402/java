@@ -1,0 +1,38 @@
+import java.util.Scanner;
+class bubble_sort {
+    public static void main (String[] args){
+
+        // use for input from the user 
+        Scanner scanf= new Scanner(System.in);
+        
+        //create array and initialize the array value 
+        int[] arr = new int[5];
+        
+        // input values in the arrays 
+        for(int i = 0; i<5; i++){
+            System.out.print("Enter the value od a["+i+"] : ");
+            arr[i] = scanf.nextInt();
+        }
+
+        
+        // program logic 
+        
+        for(int i = 0; i<5; i++){
+            for(int j = 0; j<5; j++){
+                if (arr[i]<arr[j]){ // compare the array  value from to other array 
+                    int temp = arr[i]; 
+                    arr[i]=arr[j];
+                    arr[j]= temp;
+
+                }
+            }
+        }
+        
+        //output of the bubble sort 
+        System.out.print("Bubble sort : ");
+        for(int i = 0; i<5; i++){
+            System.out.print(arr[i]+" ,");
+
+        }
+    }
+}
