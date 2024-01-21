@@ -1,0 +1,44 @@
+// ----- CHECK NO. IS PRIME OR NOT PRIME ----- 
+
+
+import java.util.Scanner;
+class Main {
+    
+    // create function or method
+    static int prime_no(int num){
+        
+        // if is num is o or 1
+        if (num<=1){
+            System.out.println(num+" is not a prime no.");
+            return 0;
+        }
+        
+    //if check num is divisible or not 
+        for (int i = 2 ; i*i<=num; i++){
+            if (num%i == 0){
+             System.out.println(num+" is a not prime no.");
+               return 0;
+            }
+        }
+        
+        // if num is not divisible 
+         System.out.println(num+" is a prime no.");
+         return 0;
+         }
+    
+    // main class 
+    public static void main(String[] args) {
+        
+        System.out.print("----- CHECK NO. IS PRIME OR NOT PRIME -----\n\n");
+        
+        //input from user
+        Scanner scanf= new Scanner(System.in);
+        System.out.print("Enter your no. : ");
+        int num = scanf.nextInt();
+        
+       // call to function 
+        prime_no(num);
+        
+        
+    }
+}
