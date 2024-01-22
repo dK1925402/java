@@ -1,0 +1,43 @@
+class Rectangle {
+    
+    private static int length;
+    private static int breadth;
+    
+    static void setLength(int l){
+        length = l;
+    }
+    
+    static void setBreadth(int b){
+        breadth = b;
+    }
+    
+    static int getLength(){
+        return length;
+    }
+    
+    static int getBreadth(){
+        return breadth;
+    }
+    
+    static int perimeter(){
+        int p = 2 * (length + breadth);
+        return p;
+    }
+    
+    static int area(){
+        int a = length * breadth;
+        return a;
+    }
+}
+
+public class Other {
+    
+    public static void main(String[] args) {
+        
+        Rectangle.setBreadth(5);
+        Rectangle.setLength(4);
+        
+        System.out.println("Area of rectangle is " + Rectangle.area());
+        System.out.println("Perimeter of rectangle is " + Rectangle.perimeter());
+    }
+}
