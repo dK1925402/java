@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+class Employee
+{
+
+
+  int Salary;
+  String name;
+
+  Scanner sc = new Scanner (System.in);
+
+  void getsalary ()
+  {
+    System.out.print ("Enter your salary : ");
+    Salary = sc.nextInt ();
+
+
+  }
+  void getname ()
+  {
+    System.out.print ("Enter your name : ");
+    name = sc.nextLine ();
+
+  }
+
+
+  void changename ()
+  {
+    System.out.println ("your old name is : " + name);
+    System.out.print ("Enter your new name is : ");
+    name = sc.nextLine ();
+
+  }
+
+  void all ()
+  {
+    System.out.println ("your salary is " + Salary);
+    System.out.print ("your name is : " + name);
+  }
+
+
+
+}
+
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+
+//              Scanner sc= new Scanner(System.in);
+
+    Employee employee = new Employee ();
+      employee.getsalary ();
+      employee.getname ();
+      employee.changename ();
+
+      employee.all ();
+  }
+}
