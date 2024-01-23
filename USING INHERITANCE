@@ -1,0 +1,76 @@
+
+/// USING INHERITANCE (EXTENDS THE CLASS)
+
+import java.util.Scanner;
+import java.lang.Math;
+
+// creating class for circle 
+class Circle {
+     double radius ;// declare radius
+     
+     // create sc for input 
+    Scanner sc = new Scanner(System.in);
+    
+    //create setter(mutator) of radius for input value from user
+    public void setradius(){
+       
+        System.out.print("Enter the radius : ");
+         radius = sc.nextDouble();    
+        
+    }
+    
+    // create this for calculate the area of circle and also give output
+    public void circlearea(){
+        double area  = Math.PI*Math.pow(radius,2);
+         System.out.println("The area of circle is "+area );
+    }
+    
+}
+
+
+
+// create circle extends class cylinder for use the cicle class -> radius method ,
+//therefore not be setter of radius in cylinder class
+class Cylinder extends Circle {
+    
+    
+    int height ;
+    
+    //create setter(mutator) of height for input value from user
+     public void setheight(){
+       
+        System.out.print("Enter the height : ");
+         height = sc.nextInt();    
+        
+    }
+
+      // create this for calculate the area of cylinder and also give output
+     public void cylinderarea(){
+        double area  =2* Math.PI* radius*(radius+height);
+         System.out.println("The area of cylinder is "+area );
+    }
+    
+    
+}
+
+// start the main class
+class Main {
+    public static void main(String[] args){
+       
+        Circle c = new Circle();
+        
+        
+        System.out.print("\n\n----- Circle -----\n\n");
+        c.setradius();
+        c.circlearea();
+        
+        
+           System.out.print("\n\n----- Cylinder -----\n\n");
+        Cylinder cy = new Cylinder();
+        
+        cy.setradius();
+        cy.setheight();
+        cy.cylinderarea();
+        
+    }
+}
