@@ -1,0 +1,60 @@
+
+//Dynamic method
+
+// creating a class name is phone 
+class Phone {
+
+// phone on method(function)
+public void on (){
+    System.out.println("turning on phone");
+}
+
+//phone showtime method 
+public void showtime(){
+    System.out.println("Show the time ...");
+}
+
+}
+
+// extend the phone class , name is Smartphone 
+class Smartphone extends Phone{
+
+    //Smartphone on method(function)
+    public void on (){
+        System.out.println("turning on Smartphone");
+    }
+
+    //smartphone music method 
+    public void music(){
+        System.out.println("play music ...");
+        
+            }
+
+}
+
+
+class Hello {
+    public static void main(String[] args) {
+        
+        // this is dynamix use
+// create a of smartphone with the phone reference
+//for example we create a smartphone with the help phone : phone -> smartphone
+        Phone obj  = new Smartphone();
+
+
+
+obj.on();//on function are available in both of classes , but we create the object of smartphone class thefore run the smartphone class on function 
+obj.showtime();//we can see the time in phone 
+//obj.music();// but we can't play the music in normal phone , therefore this fn show the error in execution 
+
+
+// this is normal use 
+
+// Smartphone x= new Smartphone();
+// x.on();
+// x.showtime();
+// x.music();
+
+    }
+}
+
