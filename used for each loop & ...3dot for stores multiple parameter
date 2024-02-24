@@ -1,0 +1,31 @@
+
+
+ class Main {
+   
+    //sum method stores the many inputs 
+    // used 3dots(...) and write variable name 
+   public static int sum (int ...arr){
+
+    //intialize the result because its compulsory to intailize the local variable
+        int result =0;
+    
+        //use for each 
+        for (int a : arr){
+            result = result+a;   
+        }
+    
+        //return the result
+        return result;
+    }
+
+
+public static void main(String[] args) {
+
+//call to sum function and store the return data in k variable
+    int k = sum (15,12,8,5,125);
+
+    //print the value of k 
+    System.out.println("the sum of the no. :"+k);
+}
+ 
+}
