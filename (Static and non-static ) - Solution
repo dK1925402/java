@@ -1,0 +1,46 @@
+class Library {
+    // Static method
+    public static void book() {
+        System.out.println("This is the book method.");
+    }
+
+    // Non-static method
+    void newspaper() {
+        System.out.println("Newspaper is better than books.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Calling static method directly using class name
+        Library.book();
+
+        // Creating an instance of the Library class
+        Library obj = new Library();
+
+        // Calling non-static method using object
+        obj.newspaper();
+
+        // Attempting to call static method using object (which is not recommended)
+        obj.book(); // This is valid but not recommended
+
+        System.out.println("Hello, world!");
+    }
+}
+
+///EXTRA GYAN ///
+
+/*
+
+In your Library class:
+
+    book() method is declared as static, so you can call it directly using the class name Library.book().
+    newspaper() method is not static, so you need to create an object of the Library class to call it.
+
+In the main method:
+
+    You first call the static book() method using the class name Library.book().
+    Then, you create an object of the Library class (Library obj = new Library()) and call its non-static newspaper() method (obj.newspaper()).
+    You also attempt to call the static book() method using the object obj, which is valid but not recommended because static methods should ideally be called using the class name.
+    Finally, you print "Hello, world!".
+*/
