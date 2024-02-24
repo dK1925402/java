@@ -1,0 +1,118 @@
+//codewitheharry(cwh) pactice exercise - 6 solved by Dhruv kumar 
+
+import java.util.Scanner;
+
+// create a invalidinput class and add constructor therefore run automatically 
+class invalidinput extends Exception{
+
+public invalidinput(){
+System.out.println("Exception occur : Invalid-input");
+    }
+}
+
+// create a maxinput class and add constructor therefore run automatically 
+class maxinput extends Exception{
+
+    public maxinput(){
+    System.out.println("Exception occur : Max-input");
+        }
+    }
+
+
+//main class
+public class calculater {
+
+public static void main(String[] args) {
+
+        
+//create Scanner obj 
+Scanner sc = new Scanner(System.in);
+
+//input first no.
+System.out.print("Enter the first no. : ");
+int a = sc.nextInt();
+
+//input Second no.
+System.out.print("Enter the Second no. : ");
+int b = sc.nextInt();
+
+//provide option
+System.out.println("\nChoose the operation : \n1.Addition\n2.Substraction\n3.Multiplication\n4.Division\n ");
+
+//choose operation
+System.out.print("Enter the operation no. : ");
+int choose = sc.nextInt();
+
+//x for store the result
+int x;
+
+// using switch case 
+switch(choose) {
+
+// 1 for add
+case 1:
+x= a+b;
+System.out.println("The result is : " +x);
+break;
+
+
+//2 for sub
+case 2:
+x= a-b;
+System.out.println("The result is : " +x);
+break;
+
+
+
+//3 for multiply
+case 3:
+
+//the any iput is greater than 700 through the custom max-input Exception  
+if (a<700 || b<700){
+    try{
+        throw new maxinput();}
+        catch(maxinput e){}
+}
+
+else{
+x= a*b;
+System.out.println("The result is : " +x);
+}
+
+break;
+
+
+
+//4 for division
+case 4:
+
+// b=0 then throw the arthmetic expression
+if (b==0){
+throw new ArithmeticException("ArithmeticException occur because b= 0");
+    }
+
+else {
+    x= a/b;
+    System.out.println("The result is : " +x);
+}
+
+break;
+
+
+
+// if enter other the selected no. then throw the custom invalid exception in default 
+default:
+try{
+throw new invalidinput();}
+catch(invalidinput e){}
+break;
+
+}
+
+
+    }
+}
+
+
+
+//////-------Khatam----------////////
