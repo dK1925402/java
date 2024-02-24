@@ -1,0 +1,42 @@
+
+
+ public class Main{
+
+    //create a method obtain 2 parameter a , b and throws Arthmetic Exception
+    static void throws_throw_keyword(int a , int b ) throws ArithmeticException{
+        
+        // if b=0 then we throw the arithmetic exception with message - "value of b is 0 are not allowed "
+        if ( b== 0 ){
+          throw new ArithmeticException("value of b is 0 are not allowed ");
+        }
+        
+        // then b is not 0 then do division 
+        int c = a/b;
+        // output ofthe division 
+        System.out.println(" the division of two no is  . "+c);}
+
+
+
+        // starting of the main class 
+public static void main(String[]  args){
+
+    // declare two instance a, b 
+int a = 5 ;
+int b = 0; 
+
+// throws_keyword method throws an exception therefore we use try catch method for call to try-catch block 
+try {
+
+    // call to the method  ; 
+    throws_throw_keyword(a,b);
+
+// method throws the arithmeticException there we catch the arithmeticException e
+}catch(ArithmeticException e){
+    
+    System.out.println("exception catch successfully " + e.getMessage());
+}
+
+
+
+}
+}
