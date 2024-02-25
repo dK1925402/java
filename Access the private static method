@@ -1,0 +1,29 @@
+
+//Access the private static method
+
+class library {
+
+//create a private static book method
+    private static void book(){
+System.out.println("this is book method ");   }
+
+//create getter of static book method for access the book method its book method is static then we create getmethod to static   
+public static void  getbook(){
+       book();
+    }
+    }
+
+
+
+
+public class Main {
+    
+    public static void main(String[] args) {
+        
+//call to static method if method is static then we call its directly by class name 
+     library.getbook();
+
+
+
+    }
+}
