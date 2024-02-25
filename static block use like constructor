@@ -1,0 +1,33 @@
+class library {
+    // Method to print a message about newspapers
+    void newspaper() {
+        System.out.println("newspaper is better than books ");
+    }
+
+    // Static initialization block, runs when the class is loaded into memory
+    static {
+        System.out.println("Processing ...... start the program");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of the library class
+        library obj = new library();
+        
+        // Call the newspaper method of the library class
+        obj.newspaper();
+    }
+}
+
+
+
+
+//Gyan 
+
+/*  
+    It's clear that the newspaper() method prints a message about newspapers being better than books.
+    The static initialization block prints a message indicating the start of the program.
+    In the main method, an instance of the library class is created and the newspaper() method is called.
+    
+    */
