@@ -1,0 +1,33 @@
+
+// Ternary Operator Program
+
+import java.util.Scanner;
+
+public class Main {
+
+public static void main(String[] args) {
+
+    //create instance(obj) of Scanner class 
+    Scanner sc = new Scanner(System.in);
+
+
+//input from user
+    System.out.println("Enter number check even & odd if even then return = 10 and odd then return = 20 \n\nEnter the no. : ");
+    int a = sc.nextInt();
+
+    //we use Ternary Operator for check the no. even and odd , its works like a if else but it used for aa small programs 
+
+    //  how to works Ternary Operator
+
+    //int variable_name = condition ? true_output : false_output ;
+
+    int result = a%2==0 ?  1:-1;
+
+    //Output
+    System.out.println(result);
+   
+
+
+}
+
+}
