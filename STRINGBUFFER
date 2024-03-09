@@ -1,0 +1,40 @@
+// STRINGBUFFER
+
+//string is unmutable means not be change ,but stringbuffer is mutable means be changable therefore we use string buffer for manipulation .  
+
+public class stringbuff{
+    public static void main(String[] args) {
+    
+        // create a simple string
+        String s = " sir";
+
+        // create a stringbuffer object name is sb and give input is "heklo"
+        StringBuffer sb = new StringBuffer("heklo");
+        System.out.println(sb);
+
+       //change the character value of string 
+       //  -> change the 2nd character of "heklo" to "hello"
+        sb.setCharAt(2, 'l');
+        System.out.println(sb);
+
+    
+        // append the value sb to s , sb = "hello" , s = " sir" -> append is = "hello sir"
+        sb.append(s);
+        System.out.println(sb);
+
+        //insert the value of any index of string 
+        //insert " khatam " at index 5 
+        //sb = "hello khatam  sir"
+        sb.insert(5, " khatam ");
+        System.out.println(sb);
+
+    
+        // set the length of string  setLength = 5 ; then sb = "hello" only because the length is 5 then string store only 5 character 
+        sb.setLength(5);
+        System.out.println(sb);
+    }
+}
+
+
+
+
