@@ -1,0 +1,36 @@
+//---- In this program we try to create a class inside the side class ----
+
+class Outerclass{
+
+    void method1(){
+        System.out.println("this is method 1 from Outerclass");
+    }
+
+
+//create static for access the easily 
+    static class Innerclass{
+
+        void method2(){
+            System.out.println("this is method 2 from Innerclass");
+        }
+    }
+}
+
+//Main class 
+public class Create_class_in_the_class {
+    public static void main(String[] args) {
+        
+Outerclass obj1 = new Outerclass();
+
+obj1.method1();
+
+//when the class is static
+Outerclass.Innerclass obj2 = new Outerclass.Innerclass();
+
+//when class is not be static 
+   //Outerclass.Innerclass obj2 = obj1.new Innerclass();
+
+obj2.method2();
+
+    }
+}
